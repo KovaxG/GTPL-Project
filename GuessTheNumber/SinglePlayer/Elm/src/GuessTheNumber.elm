@@ -57,20 +57,13 @@ processGuess guess model =
   let
     change =
       case String.toInt guess of
-        Nothing ->
-          writeLine "Not a number"
+        Nothing -> writeLine "Not a number"
         Just g ->
-          if g > model.secret then
-            writeLine (guess ++ " is too big.")
-          else if g < model.secret then
-            writeLine (guess ++ " is too small.")
-          else
-            writeLine (guess ++ " is just right, you win!")
-            >> endGame
-  in
-    model
-    |> change
-    |> clearInput
+          case compare g model.secret of
+            GT -> writeLine (guess ++ " is too big.")
+            LT -> writeLine (guess ++ " is too small.")
+            EQ -> writeLine (guess ++ " is just right, you win!") >> endGame
+  in model |> change |> clearInput
 
 writeLine : String -> Model -> Model
 writeLine msg m = { m | lines = m.lines ++ [msg] }

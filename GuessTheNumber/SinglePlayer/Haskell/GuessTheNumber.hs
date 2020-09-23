@@ -35,7 +35,7 @@ notANumber :: IO ()
 notANumber = putStrLn "Your guess is not a number!"
 
 check :: Int -> Int -> IO ()
-check secret guess
-  | secret == guess = putStrLn "You win!"
-  | secret < guess  = putStrLn "Your guess was too high." >> loop secret
-  | secret > guess  = putStrLn "Your guess was too low."  >> loop secret
+check secret guess = case compare secret guess of
+  EQ -> putStrLn "You win!"
+  LT -> putStrLn "Your guess was too high." >> loop secret
+  GT -> putStrLn "Your guess was too low."  >> loop secret
