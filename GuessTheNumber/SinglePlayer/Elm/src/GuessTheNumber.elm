@@ -1,3 +1,10 @@
+{- GTPL
+ - Game: GuessTheNumber
+ - Type: SinglePlayer
+ - Lang: Elm
+ - External Dependency: elm/random
+ -}
+
 module GuessTheNumber exposing (main)
 
 import Browser
