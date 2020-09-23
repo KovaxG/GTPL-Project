@@ -2,6 +2,7 @@
  - Game: GuessTheNumber
  - Type: SinglePlayer
  - Lang: Elm
+ -
  - External Dependency: elm/random
  -}
 

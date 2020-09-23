@@ -1,3 +1,11 @@
+/* GTPL
+ * Game: GuessTheNumber
+ * Type: SinglePlayer
+ * Lang: Haskell
+ *
+ * External Dependency: random
+ */
+
 use std::io; // bring io library from standard lib into project
 use std::cmp::Ordering;
 use rand::Rng;

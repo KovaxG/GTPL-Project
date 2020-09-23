@@ -1,8 +1,8 @@
-{- GTPL 
+{- GTPL
  - Game: GuessTheNumber
  - Type: SinglePlayer
  - Lang: Haskell
-
+ -
  - External Dependency: random
  -}
 
