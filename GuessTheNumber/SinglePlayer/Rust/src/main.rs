@@ -1,9 +1,9 @@
 /* GTPL
  * Game: GuessTheNumber
  * Type: SinglePlayer
- * Lang: Haskell
+ * Lang: Rust
  *
- * External Dependency: random
+ * External Dependency: rand
  */
 
 use std::io; // bring io library from standard lib into project
