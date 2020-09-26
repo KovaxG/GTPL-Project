@@ -1,3 +1,9 @@
+/* GTPL
+ * Game: TicTacToe
+ * Type: SinglePlayer
+ * Lang: Java (Processing)
+ */
+
 enum Player { X, O }
 enum Cell { X, O, Empty}
 
